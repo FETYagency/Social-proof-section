@@ -84,8 +84,9 @@ main{
 
 @media (min-width:600px) {
     .sections-wrapper{
-        width:70% ;
+        width:1200px ;
         margin: auto;
+        padding: 4.2rem 1rem;
     }
 }
 
@@ -204,11 +205,14 @@ main{
     .users-feedbacks>.card>p{
         width: min(260px, 100%);
     }
-
+    .users-feedbacks>.card>.feedbacks{
+        font-size: 1.2rem;
+    }
 
 
 
     .stars-rate{
+        padding-left:15rem;
         grid-area: starsrate;
         display: flex;
         flex-direction: column;
@@ -218,9 +222,9 @@ main{
         display: flex;
         align-items: center;
         gap: 2rem;
-        padding: 1rem 1.7rem;
+        padding: 1.2rem 1.7rem;
         width: max-content;
-        min-width: 70%;
+        min-width: 65%;
     }
 
     .stars-rate>.rates:nth-child(1){
@@ -232,22 +236,26 @@ main{
     .stars-rate>.rates:nth-child(3){
         align-self: flex-end;
     }
+    .stars-rate>.rates>p{
+        font-size: 1.1rem;
+    }
 
 
     
     .landing-text{
         grid-area: landingtext;
         text-align: left;
-        padding: 1.5rem 0rem 0rem 0rem;
+        padding: 6rem 0rem 0rem 0rem;
     }
     .landing-text>h1{
         margin: 0rem;
-        font-size: 3rem;
-        width: min(300px, 100%);
+        font-size: 4rem;
+        width: min(390px, 100%);
     }
     .landing-text>p{
         margin: 1.4rem 0rem 0rem 0rem;
-        font-size: 1rem;
-        width: min(360px,100%);
+        font-size: 1.2rem;
+        font-weight: 500;
+        width: min(380px,100%);
     }
 }
