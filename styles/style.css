@@ -62,15 +62,17 @@ table {
 
 main{
     min-height: 100vh;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .sections-wrapper{
-    padding: 4rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
-    min-height: 100vh;
 }
 
 /* sctions wrapper sizes */
@@ -82,13 +84,12 @@ main{
     }
 }
 
-@media (min-width:600px) {
+@media (min-width:600px){
     .sections-wrapper{
-        width:1200px ;
-        margin: auto;
-        padding: 4.2rem 1rem;
+        max-width: 1100px;
     }
 }
+
 
 /* mobile formatting */
 
@@ -175,13 +176,9 @@ main{
         display: grid;
         grid-template-columns: repeat(2, auto);
         grid-template-areas:
-         'landingtext starsrate'
-         'usersfeedback usersfeedback';
+        'landingtext starsrate'
+        'usersfeedback usersfeedback';
     }
-
-
-
-
 
     .users-feedbacks{
         grid-area: usersfeedback;
@@ -191,13 +188,10 @@ main{
 
     }
     .users-feedbacks>.card{
-        padding: 2rem 2rem;
+        padding: 2rem;
     }
     .users-feedbacks>.card:nth-child(1){
         margin-bottom: auto;
-    }
-    .users-feedbacks>.card:nth-child(2){
-        margin: 0rem;
     }
     .users-feedbacks>.card:nth-child(3){
         margin-top: auto;
@@ -212,7 +206,6 @@ main{
 
 
     .stars-rate{
-        padding-left:15rem;
         grid-area: starsrate;
         display: flex;
         flex-direction: column;
@@ -229,9 +222,11 @@ main{
 
     .stars-rate>.rates:nth-child(1){
         align-self: flex-start;
+        transform: translateX(6rem);
     }
     .stars-rate>.rates:nth-child(2){
         align-self: center;
+        transform: translateX(3rem);
     }
     .stars-rate>.rates:nth-child(3){
         align-self: flex-end;
@@ -245,11 +240,10 @@ main{
     .landing-text{
         grid-area: landingtext;
         text-align: left;
-        padding: 6rem 0rem 0rem 0rem;
     }
     .landing-text>h1{
         margin: 0rem;
-        font-size: 4rem;
+        font-size: clamp(3rem, 4vw, 4rem);
         width: min(390px, 100%);
     }
     .landing-text>p{
@@ -257,5 +251,21 @@ main{
         font-size: 1.2rem;
         font-weight: 500;
         width: min(380px,100%);
+    }
+}
+
+
+@media (max-width:859px){
+    .stars-rate>.rates:nth-child(1){
+        align-self: center;
+        transform: translateX(0rem);
+    }
+    .stars-rate>.rates:nth-child(2){
+        align-self: center;
+        transform: translateX(0rem);
+    }
+    .stars-rate>.rates:nth-child(3){
+        align-self: center;
+        transform: translateX(0rem);
     }
 }
